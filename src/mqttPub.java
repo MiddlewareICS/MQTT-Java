@@ -22,8 +22,9 @@ public class mqttPub {
       
       while(true){
     	  client.publish("TEST", message);
+    	  System.out.println("--Pub: "+message.toString());
     	  try{
-    		  	Thread.sleep(1000);//1000ms = 1sec
+    		  	Thread.sleep(3000);//1000ms = 1sec  		  	
     	  }catch(InterruptedException e){
     			System.err.println("Interrupted");
     	  }
